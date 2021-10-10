@@ -1,6 +1,6 @@
 # Wetterstation für den Raspberry PI mit Funkverbindung
 
-Die Wetterstation misst Temperatur, Feuchtigkeit, Regen und Wind. Die Daten werden auf einen Dashboard ausgegeben. Ich verwende dazu Funk Sensoren von Amazon. Somit kannst du alle 15 Minuten das Wetter abrufen. Weiterhin zeige ich, wie man noch das Dashboard mit einer Wetterapi verknüpfen kann. 
+Die Wetterstation misst Temperatur, Feuchtigkeit, Regen und Wind. Die Daten werden auf einen Dashboard ausgegeben. Ich verwende dazu Funk Sensoren von Amazon. Somit kannst du alle 15 Minuten das Wetter abrufen. Weiterhin zeige ich, wie man noch das Dashboard mit einer Wetterapi verknüpfen kann. Ich berechne im Script anhand der Luftfeuchtigkeit und des Wind die gefühlte Temperatur. So kannst du aus den Messwerten auch etwas für dich mitnehmen. 
 
 <img src="https://agile-unternehmen.de/stuff/Wetterstation-sql-final.png">
 <img src="https://agile-unternehmen.de/stuff/sql-wetterstation1.png">
@@ -10,7 +10,7 @@ Du brauchst dazu:
 
 * <a href="https://amzn.to/3zHNZnH" target="_blank">Raspberry PI 3</a>
 * <a href="https://all-inkl.com/PA3BB517416727D" target="_blank"> Eigene SQL Datenbank bei einem Provider</a>
-* Temperature: <a href="https://amzn.to/3oPndbq">TFA Dostmann Thermo-Hygro-Sender, 30.3221.02</a>
+* Temperature: <a href="https://amzn.to/3oPndbq">TFA Dostmann Thermo-Hygro-Sender, 30.3221.02</a> (das brauchst du 2 Mal - einer kommt in die Sonne und einer in den Schatten)
 * Rain: <a href ="https://amzn.to/3Dqihh4">TFA Dostmann 30.3222.02</a>
 * Wind: <a href="https://amzn.to/30eydor">TFA Dostmann 30.3161 </a>
 * Stick: <a href="https://amzn.to/3anco7Z"> RTL-SDR Stick </a>
@@ -42,6 +42,17 @@ Du brauchst dazu:
 
 # Sensoren bestimmen
 
+* gib zuerst ein sudo rtl_433
+* Schaue die die Eingaben an und ob du deine Sensoren findest! Siehe Bild unten.
+* Falls einige nicht kommen probiere andere Frequenzen: sudo rtl_433 -f 433.9M und rtl_433 -f 433.8M usw.
+* Wenn du alle gefunden hast, brauchst du die ID'S
+* sudo rtl_433 -F json -f 433.9
+* Die Ausgabe ist nun ungefähr so:
+* {"time" : "2021-10-09 21:08:27", "model" : "LaCrosse-TX141W", "id" : 86798, "channel" : 0, "battery_ok" : 1, "wind_avg_km_h" : 2.300, "wind_dir_deg" : 0, "test" : 0, "mic" : "CRC"}
+* Das ist ein JSON String. Den kannst du in eine Datenbank packen. Schreibe dir dazu die ID auf wie hier: 86798
+* Mache das für alle Sensoren, welche du hast
+
+<img src="https://agile-unternehmen.de/stuff/sensordaten.png">
 # Datenbanken anlegen
 * Lege dir eine Datenbank bei einem  <a href="https://all-inkl.com/PA3BB517416727D" target="_blank"> Provider wie all-inkl an.</a>
 * Lege die folgenden Datenbanken wie im Bild beschrieben kann.
@@ -59,6 +70,13 @@ Du brauchst dazu:
 * sudo systemctl enable SQL_RTL_433.service
 * sudo systemctl start SQL_RTL_433.service
 * Check it : sudo systemctl status SQL_RTL_433.service
+
+# Bilder
+Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für jeweils 1 Dollar.
+* Temperaturicon: https://www.creativefabrica.com/de/product/temperature-icon-4/
+* Free Wind Icon: https://www.iconfinder.com/icons/316050/wind_icon
+* Free Feuchtigkeit Icon: https://icon-icons.com/de/symbol/Luftfeuchtigkeit-Wetter/52507
+* Lege die Bilder ein einen order img mit Namen: wind.png, sonne.png, schatten.png, luftfeuchtigkeit.png
 
 # Disclaimer
 
