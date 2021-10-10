@@ -493,6 +493,7 @@ if ($result = mysqli_query($con, $sql))
             </p>
           </div>
         </main>
+/*
         <main role="main" class="container">
               <div class="jumbotron">
                 <h1>Wetterbericht</h1>
@@ -505,7 +506,7 @@ if ($result = mysqli_query($con, $sql))
               </div>
 
             </main>
-     
+     /*
 <h1>Alle Schatten Werte</h1>
 	<p class="lead">Hier finden sich die letzten Schatten Werte</p>
 <table class="table table-hover">
