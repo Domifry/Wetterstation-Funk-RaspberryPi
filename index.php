@@ -506,7 +506,7 @@ if ($result = mysqli_query($con, $sql))
               </div>
 
             </main>
-     /*
+     */
 <h1>Alle Schatten Werte</h1>
 	<p class="lead">Hier finden sich die letzten Schatten Werte</p>
 <table class="table table-hover">
