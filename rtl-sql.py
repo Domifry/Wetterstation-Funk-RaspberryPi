@@ -1,57 +1,63 @@
 #!/usr/bin/env python3
 
-#Autor https://github.com/Domifry
-#with help of https://github.com/mrkwenzel
-#usage of the rtl_433 of https://github.com/merbanan/rtl_433
 
 import mysql.connector
 import time
 import subprocess
 import os
 import sys
+import http.client, urllib
 
-proc = subprocess.Popen(['rtl_433', '-F', 'json'], stdout=subprocess.PIPE)
+proc = subprocess.Popen(['rtl_433','-R', '73', '-F', 'json', '-f', '433.9M'], stdout=subprocess.PIPE)
 sensor1 = False
 sensor2 = False
-json1 = line.rstrip()
-#sorry for this but the string makes some lines that it is bad for SQL
-json = str(json1)
-json = json.lstrip("'")
-json = json.lstrip("b")
-json = json.lstrip("'")
-json = json.rstrip("'")
+sensor3 = False
+sensor4 = False
 connected = False
 counter = 0
 
 while True:
-  line = proc.stdout.readline()
+  line = proc.stdout.readline())
   json1 = line.rstrip()
   json = str(json1)
+  json = json.lstrip("'")
+  json = json.lstrip("b")
+  json = json.lstrip("'")
+  json = json.rstrip("'")
   counter+=1
-  #if not line:
-  #  break
-  if connected == False:  
-   connection = mysql.connector.connect(host="IP", user="USER", passwd="PASS", db="DB")
+  if connected == False:
+   connection = mysql.connector.connect(host="ID", user="user", passwd="pass", db="user")
    cursor = connection.cursor()
    connected = True
-  if "Sensor1-ID" in json and sensor1 == False:
-    statement = "SQL Statement'"+json+"'statement"
-    cursor.execute(statement)
-    sensor1 = True
-   if "Sensor2-ID" in json and sensor2 == False:
-     statement = "SQL Statement'"+json+"'statement"
-     cursor.execute(statement)
-     sensor2 = True
-   if counter == 100:
-     proc = subprocess.Popen(['rtl_433', '-F', 'json'], stdout=subprocess.PIPE)
-   if counter == 150:
-     break
-     #here you can send yourself a Mail or a push
-   if sensor1 == True and sensor2 == True:
-      sensor1 = False
-      sensor2 = False
-      connected = False
-      connection.commit()
-      cursor.close()
-      counter = 0
-      time.sleep(900)
+  if "ID" in json and sensor1 == False:
+   statement = "INSERT INTO `d03794ba`.`Schatten` (`ID`, `Schatten`, `Zeit`) VALUES (NULL,' "+json+"', current_timestamp())"
+   cursor.execute(statement)
+   sensor1 = True
+  if "ID" in json and sensor2 == False:
+   statement = "INSERT INTO `d03794ba`.`Sonne` (`ID`, `Sonne`, `Zeit`) VALUES (NULL, '"+json+"', current_timestamp())"
+   cursor.execute(statement)
+   sensor2 = True
+  if "ID" in json and sensor3 == False and "wind_avg_km_h" in json:
+   statement = "INSERT INTO `d03794ba`.`Wind` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
+   cursor.execute(statement)
+   sensor3 = True
+  if "ID" in json and sensor4 == False and "rain" in json:
+   statement = "INSERT INTO `d03794ba`.`Regen` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
+   cursor.execute(statement)
+   sensor3 = True
+  if counter == 100:
+   # sollte 100 mal nichts ankommen, startet er das script neu
+   proc = subprocess.Popen(['rtl_433','-R', '73', '-F', 'json'], stdout=subprocess.PIPE)
+  if counter == 150:
+   #script ist kaputt und bricht ab
+   break
+  if sensor1 == True and sensor2 == True and sensor3 == True and sensor4 == true:
+   sensor1 = False
+   sensor2 = False
+   sensor3 = False
+   sensor4 = False
+   connected = False
+   connection.commit()
+   cursor.close()
+   counter = 0
+   time.sleep(900)
