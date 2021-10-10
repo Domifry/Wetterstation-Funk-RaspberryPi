@@ -53,6 +53,7 @@ Du brauchst dazu:
 * Mache das für alle Sensoren, welche du hast
 
 <img src="https://agile-unternehmen.de/stuff/sensordaten.png">
+
 # Datenbanken anlegen
 * Lege dir eine Datenbank bei einem  <a href="https://all-inkl.com/PA3BB517416727D" target="_blank"> Provider wie all-inkl an.</a>
 * Lege die folgenden Datenbanken wie im Bild beschrieben kann.
@@ -62,8 +63,9 @@ Du brauchst dazu:
 <img src="https://agile-unternehmen.de/stuff/sql-wetterstation.png">
 
 # Python Dateien aus dem Raspberry
-* Line23: Put your SQL Data in
-* Line31 and 28: Put your SQL Statement in
+* Line23: Trage due Daten deiner SQL Datenbank ein
+* Mache alle Sensoren, welche du nicht nutzen willst raus
+* Dazu 
 * Start the file SQL_RTL_433.service
 * Put the Service file to the right place
 * sudo mv SQL_RTL_433.service /etc/systemd/system
