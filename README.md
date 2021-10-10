@@ -39,9 +39,12 @@ Du brauchst dazu:
 * cmake ../
 * make
 * sudo make install
+* <b> Kopieren wir die Files auf den Raspberry</b>
+* git clone https://github.com/Domifry/Wetterstation-Funk-RaspberryPi
+* cd Wetterstation-Funk-RaspberryPi
+* sudo mv SQL_RTL_433.service /etc/systemd/system
 
 # Sensoren bestimmen
-
 * gib zuerst ein sudo rtl_433
 * Schaue die die Eingaben an und ob du deine Sensoren findest! Siehe Bild unten.
 * Falls einige nicht kommen probiere andere Frequenzen: sudo rtl_433 -f 433.9M und rtl_433 -f 433.8M usw.
@@ -63,11 +66,15 @@ Du brauchst dazu:
 <img src="https://agile-unternehmen.de/stuff/sql-wetterstation.png">
 
 # Python Dateien aus dem Raspberry
-* Line23: Trage due Daten deiner SQL Datenbank ein
-* Mache alle Sensoren, welche du nicht nutzen willst raus
-* Dazu 
-* Start the file SQL_RTL_433.service
-* Put the Service file to the right place
+* Line23: Trage die Daten deiner SQL Datenbank ein
+* Mache alle Sensoren, welche du nicht nutzen willst raus 
+* Gehe in den Order 
+* cd Wetterstation-Funk-RaspberryPi
+* sudo nano rtl-sql.py
+* Trage bei jedem IF Statement (32,36,40 und 44) die ID's der Sensoren ein
+* Trage deine SQL Daten ein in Zeile 29
+* Trage noch deinen Datenbanknamen in Zeile 33,37,41 und 45 ein
+* Nun starten wir das Script noch automatisch und lassen es alle 15 Minuten Daten abholen
 * sudo mv SQL_RTL_433.service /etc/systemd/system
 * sudo systemctl enable SQL_RTL_433.service
 * sudo systemctl start SQL_RTL_433.service
@@ -79,6 +86,15 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Free Wind Icon: https://www.iconfinder.com/icons/316050/wind_icon
 * Free Feuchtigkeit Icon: https://icon-icons.com/de/symbol/Luftfeuchtigkeit-Wetter/52507
 * Lege die Bilder ein einen order img mit Namen: wind.png, sonne.png, schatten.png, luftfeuchtigkeit.png
+
+# Index.php
+* Lege die index.php in einen Order und baue einen Unterorder img mit den Bildern auf deinem Webspace
+* Trage deine SQL Daten in die Datei ein (ganz oben)
+* rufe die Seite auf
+
+# index.php und Wetterbericht
+* Wenn du einen Wetterbericht noch haben willst, dann hole dir einen API Key auf https://openweathermap.org
+* Kommentiere die Zeilen XX und XX ein
 
 # Disclaimer
 
