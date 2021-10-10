@@ -30,19 +30,19 @@ while True:
    cursor = connection.cursor()
    connected = True
   if "ID" in json and sensor1 == False:
-   statement = "INSERT INTO `d03794ba`.`Schatten` (`ID`, `Schatten`, `Zeit`) VALUES (NULL,' "+json+"', current_timestamp())"
+   statement = "INSERT INTO `NAME`.`Schatten` (`ID`, `Schatten`, `Zeit`) VALUES (NULL,' "+json+"', current_timestamp())"
    cursor.execute(statement)
    sensor1 = True
   if "ID" in json and sensor2 == False:
-   statement = "INSERT INTO `d03794ba`.`Sonne` (`ID`, `Sonne`, `Zeit`) VALUES (NULL, '"+json+"', current_timestamp())"
+   statement = "INSERT INTO `NAME`.`Sonne` (`ID`, `Sonne`, `Zeit`) VALUES (NULL, '"+json+"', current_timestamp())"
    cursor.execute(statement)
    sensor2 = True
   if "ID" in json and sensor3 == False and "wind_avg_km_h" in json:
-   statement = "INSERT INTO `d03794ba`.`Wind` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
+   statement = "INSERT INTO `NAME`.`Wind` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
    cursor.execute(statement)
    sensor3 = True
   if "ID" in json and sensor4 == False and "rain" in json:
-   statement = "INSERT INTO `d03794ba`.`Regen` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
+   statement = "INSERT INTO `NAME`.`Regen` (`ID`, `Wind`, `Zeit`) VALUES (NULL,'"+json+"', current_timestamp())"
    cursor.execute(statement)
    sensor3 = True
   if counter == 100:
