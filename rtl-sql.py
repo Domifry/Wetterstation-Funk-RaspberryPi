@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-
+# Github Domifry
+# Support Github mrkwenzel
 
 import mysql.connector
 import time
