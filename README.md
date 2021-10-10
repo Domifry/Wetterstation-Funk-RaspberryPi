@@ -96,7 +96,7 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 
 # index.php und Wetterbericht
 * Wenn du einen Wetterbericht noch haben willst, dann hole dir einen API Key auf https://openweathermap.org
-* Kommentiere die Zeilen 11 - 95 und XX ein
+* Kommentiere die Zeilen 11 - 95 und 496 - 509 ein
 
 # Disclaimer
 
