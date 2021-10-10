@@ -1,4 +1,5 @@
 <?php
+// Github Domifry
 $Datenbank = "INSERT";
 $Passwort = "INSERT";
 //$edition = "winter";
