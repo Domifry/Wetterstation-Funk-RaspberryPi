@@ -79,6 +79,7 @@ Du brauchst dazu:
 * sudo systemctl enable SQL_RTL_433.service
 * sudo systemctl start SQL_RTL_433.service
 * Check it : sudo systemctl status SQL_RTL_433.service
+* Wichtig: Die Daten für den Regenmesser sind noch nicht drin - ich arbeite noch dran (bis ca. 15.10.21)
 
 # Bilder
 Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für jeweils 1 Dollar.
@@ -91,6 +92,7 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Lege die index.php in einen Order und baue einen Unterorder img mit den Bildern auf deinem Webspace
 * Trage deine SQL Daten in die Datei ein (ganz oben)
 * rufe die Seite auf
+* Wichtig: Die Daten für den Regenmesser sind noch nicht drin - ich arbeite noch dran (bis ca. 15.10.21)
 
 # index.php und Wetterbericht
 * Wenn du einen Wetterbericht noch haben willst, dann hole dir einen API Key auf https://openweathermap.org
