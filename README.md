@@ -86,7 +86,7 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Free Wind Icon: https://www.iconfinder.com/icons/316050/wind_icon
 * Free Feuchtigkeit Icon: https://icon-icons.com/de/symbol/Luftfeuchtigkeit-Wetter/52507
 * Free Rain Icon: https://icon-icons.com/de/symbol/cloud-Natur-Regen-Wetter/99845
-* Lege die Bilder ein einen order img mit Namen: wind.png, sonne.png, schatten.png, luftfeuchtigkeit.png
+* Lege die Bilder ein einen order img mit Namen: wind.png, sonne.png, schatten.png, luftfeuchtigkeit.png, regen.png
 
 # Index.php
 * Lege die index.php in einen Order und baue einen Unterorder img mit den Bildern auf deinem Webspace
