@@ -2,7 +2,7 @@
 
 Die Wetterstation misst Temperatur, Feuchtigkeit, Regen und Wind. Die Daten werden auf einen Dashboard ausgegeben. Ich verwende dazu Funk Sensoren von Amazon. Somit kannst du alle 15 Minuten das Wetter abrufen. Weiterhin zeige ich, wie man noch das Dashboard mit einer Wetterapi verknüpfen kann. Ich berechne im Script anhand der Luftfeuchtigkeit und des Wind die gefühlte Temperatur. So kannst du aus den Messwerten auch etwas für dich mitnehmen. 
 
-<img src="https://agile-unternehmen.de/stuff/Wetterstation-sql-final.png">
+<img src="https://agile-unternehmen.de/stuff/wetterstation-raspberry-funk-1.png">
 <img src="https://agile-unternehmen.de/stuff/sql-wetterstation1.png">
 
 # Hardware
