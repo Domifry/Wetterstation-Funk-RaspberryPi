@@ -85,6 +85,7 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Temperaturicon: https://www.creativefabrica.com/de/product/temperature-icon-4/
 * Free Wind Icon: https://www.iconfinder.com/icons/316050/wind_icon
 * Free Feuchtigkeit Icon: https://icon-icons.com/de/symbol/Luftfeuchtigkeit-Wetter/52507
+* Free Rain Icon: https://icon-icons.com/de/symbol/cloud-Natur-Regen-Wetter/99845
 * Lege die Bilder ein einen order img mit Namen: wind.png, sonne.png, schatten.png, luftfeuchtigkeit.png
 
 # Index.php
