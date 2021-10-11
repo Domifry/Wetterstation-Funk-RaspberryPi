@@ -14,7 +14,7 @@ Du brauchst dazu:
 * Rain: <a href ="https://amzn.to/3Dqihh4">TFA Dostmann 30.3222.02</a>
 * Wind: <a href="https://amzn.to/30eydor">TFA Dostmann 30.3161 </a>
 * Stick: <a href="https://amzn.to/3anco7Z"> RTL-SDR Stick </a>
-* Antenne: <a href="https://amzn.to/3aExHlH"> Delock 88877 ISM SMA Omni Star  </a>
+* Antenne: Kommt noch
 * Active USB HUB (Energy): <a href="https://amzn.to/3arlGj8"> CSL USB HUB </a>
 
 # Vorbereitung
@@ -45,7 +45,7 @@ Du brauchst dazu:
 * sudo mv SQL_RTL_433.service /etc/systemd/system
 
 # Sensoren bestimmen
-* gib zuerst ein sudo rtl_433
+* gib zuerst ein sudo rtl_433 -R 73 -R 37
 * Schaue die die Eingaben an und ob du deine Sensoren findest! Siehe Bild unten.
 * Falls einige nicht kommen probiere andere Frequenzen: sudo rtl_433 -f 433.9M und rtl_433 -f 433.8M usw.
 * Wenn du alle gefunden hast, brauchst du die ID'S
@@ -79,7 +79,6 @@ Du brauchst dazu:
 * sudo systemctl enable SQL_RTL_433.service
 * sudo systemctl start SQL_RTL_433.service
 * Check it : sudo systemctl status SQL_RTL_433.service
-* Wichtig: Die Daten für den Regenmesser sind noch nicht drin - ich arbeite noch dran (bis ca. 15.10.21)
 
 # Bilder
 Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für jeweils 1 Dollar.
