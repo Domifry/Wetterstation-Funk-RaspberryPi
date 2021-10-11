@@ -9,7 +9,7 @@ import os
 import sys
 import http.client, urllib
 
-proc = subprocess.Popen(['rtl_433','-R', '73', '-F', 'json', '-f', '433.9M'], stdout=subprocess.PIPE)
+proc = subprocess.Popen(['rtl_433','-R', '73', '-R', '37','-F', 'json', '-f'], stdout=subprocess.PIPE)
 sensor1 = False
 sensor2 = False
 sensor3 = False
@@ -48,7 +48,7 @@ while True:
    sensor3 = True
   if counter == 100:
    # sollte 100 mal nichts ankommen, startet er das script neu
-   proc = subprocess.Popen(['rtl_433','-R', '73', '-F', 'json'], stdout=subprocess.PIPE)
+   proc = subprocess.Popen(['rtl_433','-R', '73', '-R', '37','-F', 'json', '-f'], stdout=subprocess.PIPE)
   if counter == 150:
    #script ist kaputt und bricht ab
    break
