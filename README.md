@@ -19,30 +19,42 @@ Du brauchst dazu:
 
 # Vorbereitung
 
-* Den RTL-SDR Stick steckst du in den aktiven USB Hub und dann in den Raspberry (so kriegt der Stick genug Strom für den Dauerbetrieb)
-* pip install mysql-connector-python
-* pip install python3
-* <b>Nun installieren wir den Stick </b>
-* git clone git://git.osmocom.org/rtl-sdr.git
-* cd rtl-sdr
-* mkdir build
-* cd build
-* cmake -DDETACH_KERNEL_DRIVER=ON ../
-* make
-* sudo make install
-* sudo ldconfig
-* <b> Nun installieren wir eine Software zum Auslesen der Sensoren </b>
-* git clone git://github.com/merbanan/rtl_433
-* cd rtl_433
-* mkdir build
-* cd build
-* cmake ../
-* make
-* sudo make install
-* <b> Kopieren wir die Files auf den Raspberry</b>
-* git clone https://github.com/Domifry/Wetterstation-Funk-RaspberryPi
-* cd Wetterstation-Funk-RaspberryPi
-* sudo mv SQL_RTL_433.service /etc/systemd/system
+Den RTL-SDR Stick steckst du in den aktiven USB Hub und dann in den Raspberry (so kriegt der Stick genug Strom für den Dauerbetrieb)
+
+```
+pip install mysql-connector-python
+pip install python3
+```
+
+<b>Nun installieren wir den Stick </b>
+
+```git clone git://git.osmocom.org/rtl-sdr.git
+cd rtl-sdr
+mkdir build
+cd build
+cmake -DDETACH_KERNEL_DRIVER=ON ../
+make
+sudo make install
+sudo ldconfig
+```
+
+<b> Nun installieren wir eine Software zum Auslesen der Sensoren </b>
+```
+git clone git://github.com/merbanan/rtl_433
+cd rtl_433
+mkdir build
+cd build
+cmake ../
+make
+sudo make install
+```
+
+<b> Kopieren wir die Files auf den Raspberry</b>
+```
+git clone https://github.com/Domifry/Wetterstation-Funk-RaspberryPi
+cd Wetterstation-Funk-RaspberryPi
+sudo mv SQL_RTL_433.service /etc/systemd/system
+```
 
 # Sensoren bestimmen
 * gib zuerst ein sudo rtl_433 -R 73 -R 37
