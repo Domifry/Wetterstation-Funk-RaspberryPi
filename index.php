@@ -143,7 +143,29 @@ echo("<b>".$sonne." Grad </b> <br> &nbsp; &nbsp;Pack dich warm ein!");
 
 return;
 }
+function rain() {
+global $Datenbank, $Passwort, $defizit;
+	// Create connection
+$con=mysqli_connect("localhost",$Datenbank,$Passwort,$Datenbank);
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+// Suche die Anzahl der Tabellen
+$result = mysqli_query($con, "SELECT COUNT(ID) as anzahl FROM `Regen`");
+$data=mysqli_fetch_assoc($result);
+$total = $data['anzahl'];
+//suche nun den letzten Wert
+$result = mysqli_query($con, 'SELECT * FROM `Regen` WHERE ID='.$total);
+$row = $result->fetch_array();
+$json = $row['Regen'];
+$json1 = json_decode($json,true);
+$rain = $json1["rain_mm"];
 
+echo("<b>".$rain." Grad </b> <br> &nbsp; &nbsp;Es ist recht ähnlich!");
+
+return;
+}
 function schatten() {
 global $sonne;
 global $minimum_temp1;
