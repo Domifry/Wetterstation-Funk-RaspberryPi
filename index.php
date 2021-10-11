@@ -461,7 +461,44 @@ if ($result = mysqli_query($con, $sql))
 			}
 		} return;
 			}
-?>
+			function werteregen() {
+				global $Datenbank, $Passwort, $defizit;
+					// Create connection
+				$con=mysqli_connect("localhost",$Datenbank,$Passwort,$Datenbank);
+
+			// Check connection
+			if (mysqli_connect_errno())
+			{
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			}
+
+			// This SQL statement selects ALL from the table 'Locations'
+			$sql = "SELECT * FROM `Regen` ORDER BY `ID` DESC LIMIT 0 , 20";
+
+			// Check if there are results
+			$counter = 1;
+			if ($result = mysqli_query($con, $sql))
+			{
+				// Loop through each row in the result set
+					while($row = $result->fetch_array()) {
+					// Add each row into our results array
+					$temp = $row['Zeit'];
+					$datum1 = substr($temp,0,11);
+					$datum = substr($datum1,8,-1).".".substr($datum1,5,-4).".".substr($datum1,0,-7);
+					$zeit = substr($temp,10);
+					$json = $row['Regen'];
+				  $shadow = json_decode($json,true);
+				  $rain = $shadow["rain_mm"];
+					echo('    <tr>
+						<th scope="row">'.$counter.'</th>
+						<td>'.$rain.'</td>
+						<td>'.$datum.'</td>
+						<td>'.$zeit.'</td>
+					</tr>');
+					$counter++;
+				}
+			} return;
+				}?>
 
 <html>
   <head>
@@ -556,6 +593,24 @@ if ($result = mysqli_query($con, $sql))
 </thead>
 <tbody>
 <?php echo(wertewind());?>
+</tbody>
+</table>
+</div> </main>
+<main role="main" class="container">
+<div>
+<h1>Alle Regen Werte</h1>
+	<p class="lead">Hier finden sich die letzten Regen Werte</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Regen</th>
+<th scope="col">Datum</th>
+<th scope="col">Zeit</th>
+</tr>
+</thead>
+<tbody>
+<?php echo(werteregen());?>
 </tbody>
 </table>
 </div> </main>
