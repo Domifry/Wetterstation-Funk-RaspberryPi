@@ -161,9 +161,7 @@ $row = $result->fetch_array();
 $json = $row['Regen'];
 $json1 = json_decode($json,true);
 $rain = $json1["rain_mm"];
-
-echo("<b>".$rain." Grad </b> <br> &nbsp; &nbsp;Es ist recht ähnlich!");
-
+echo($rain." mm");
 return;
 }
 function schatten() {
