@@ -92,7 +92,6 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Lege die index.php in einen Order und baue einen Unterorder img mit den Bildern auf deinem Webspace
 * Trage deine SQL Daten in die Datei ein (ganz oben)
 * rufe die Seite auf
-* Wichtig: Die Daten für den Regenmesser sind noch nicht drin - ich arbeite noch dran (bis ca. 15.10.21)
 
 # index.php und Wetterbericht
 * Wenn du einen Wetterbericht noch haben willst, dann hole dir einen API Key auf https://openweathermap.org
