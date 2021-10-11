@@ -543,7 +543,7 @@ if ($result = mysqli_query($con, $sql))
             <p class="lead">
               <br>
               <table>
-                <tr> <td> <img src="/img/sonne.png" width="50px"> </td><td><br>&nbsp; &nbsp;Temperatur (Sonne): <?php sonne(); ?>&nbsp; &nbsp; &nbsp;</td><td> &nbsp; &nbsp;<img src="/img/schatten.png" width="50px"></td><td><br>&nbsp; &nbsp;Temperatur (Schatten): <?php schatten(); ?> &nbsp; &nbsp; &nbsp;</td></tr><tr><td><br><br></td><td></td></tr><tr><td> &nbsp; &nbsp;<img src="/img/luftfeuchtigkeit.png" width="40px"> </td><td><br>&nbsp; &nbsp; Luftfeuchtigkeit: <?php luftfeuchtigkeit(); ?></td><td> &nbsp; &nbsp;<img src="/img/wind.png" width="70px"> </td><td><br>&nbsp; &nbsp; Wind: <?php wind(); ?></td></p> </tr>
+                <tr> <td> <img src="/img/sonne.png" width="50px"> </td><td><br>&nbsp; &nbsp;Temperatur (Sonne): <?php sonne(); ?>&nbsp; &nbsp; &nbsp;</td><td> &nbsp; &nbsp;<img src="/img/schatten.png" width="50px"></td><td><br>&nbsp; &nbsp;Temperatur (Schatten): <?php schatten(); ?> &nbsp; &nbsp; &nbsp;</td></tr><tr><td><br><br></td><td></td></tr><tr><td> &nbsp; &nbsp;<img src="/img/luftfeuchtigkeit.png" width="40px"> </td><td><br>&nbsp; &nbsp; Luftfeuchtigkeit: <?php luftfeuchtigkeit(); ?></td><td> &nbsp; &nbsp;<img src="/img/wind.png" width="70px"> </td><td><br>&nbsp; &nbsp; Wind: <?php wind(); ?></td><td> &nbsp; &nbsp;<img src="/img/regen.png" width="70px"> </td><td><br>&nbsp; &nbsp; Regen: <?php rain(); ?></td></p> </tr>
 
               </table>
 
