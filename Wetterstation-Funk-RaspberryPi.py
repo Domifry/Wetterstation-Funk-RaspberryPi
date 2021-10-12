@@ -9,7 +9,7 @@ import os
 import sys
 import http.client, urllib
 
-proc = subprocess.Popen(['rtl_433','-R', '73', '-R', '37','-F', 'json', '-f'], stdout=subprocess.PIPE)
+proc = subprocess.Popen(['rtl_433','-R', '73', '-R', '37','-F' , 'json', '-f', '433.95M'], stdout=subprocess.PIPE)
 sensor1 = False
 sensor2 = False
 sensor3 = False
