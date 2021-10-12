@@ -28,7 +28,8 @@ pip install python3
 
 <b>Nun installieren wir den Stick </b>
 
-```git clone git://git.osmocom.org/rtl-sdr.git
+```
+git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr
 mkdir build
 cd build
