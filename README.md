@@ -14,7 +14,7 @@ Du brauchst dazu:
 * Rain: <a href ="https://amzn.to/3Dqihh4">TFA Dostmann 30.3222.02</a>
 * Wind: <a href="https://amzn.to/30eydor">TFA Dostmann 30.3161 </a>
 * Stick: <a href="https://amzn.to/3anco7Z"> RTL-SDR Stick </a>
-* Antenne: <a href="https://amzn.to/3vaIjlD">Technikkram 433 MHz Antenne  </a>
+* Antenne: <a href="https://amzn.to/30ytm1D">Technikkram 433 MHz Antenne  </a>
 * Active USB HUB (Energy): <a href="https://amzn.to/3arlGj8"> CSL USB HUB </a>
 
 # Vorbereitung
