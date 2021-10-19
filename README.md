@@ -112,6 +112,9 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Wenn du einen Wetterbericht noch haben willst, dann hole dir einen API Key auf https://openweathermap.org
 * Kommentiere die Zeilen 11 - 95 und 496 - 509 ein
 
+# Kühlung
+Aktuell wird der Stick nach einiger Zeit sehr warm und bricht ab. Ich schaue gerade, dass ich eine Kühlung entwerfe und hier eine Info dazu poste.
+
 # Disclaimer
 
 Ich weis, dass man die Applikation sicher schöner programmieren kann und bspw. den String in Python direkt kürzen kann. Allerdings habe ich die Software programmiert bevor die Sensoren da waren. Da es ein privates Projekt ist und funktioniert, lasse ich es so. Aber falls mir jemand helfen möchte, kannst du gerne den Code noch sauber ziehen. Ich freue mich über jede Hilfe!
