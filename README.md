@@ -13,7 +13,7 @@ Du brauchst dazu:
 * Temperature: <a href="https://amzn.to/3oPndbq">TFA Dostmann Thermo-Hygro-Sender, 30.3221.02</a> (das brauchst du 2 Mal - einer kommt in die Sonne und einer in den Schatten)
 * Rain: <a href ="https://amzn.to/3Dqihh4">TFA Dostmann 30.3222.02</a>
 * Wind: <a href="https://amzn.to/30eydor">TFA Dostmann 30.3161 </a>
-* Stick: <a href="https://amzn.to/3anco7Z"> RTL-SDR Stick </a>
+* Stick: <a href="https://amzn.to/3vshPfx"> RTL-SDR Stick </a>
 * Antenne: <a href="https://amzn.to/30ytm1D">Technikkram 433 MHz Antenne  </a>
 * Active USB HUB (Energy): <a href="https://amzn.to/3arlGj8"> CSL USB HUB </a>
 
