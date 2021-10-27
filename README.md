@@ -113,7 +113,7 @@ Suche dir vier Bilder - meine habe ich von einer Bilderdatenbank gekauft für je
 * Kommentiere die Zeilen 11 - 95 und 496 - 509 ein
 
 # Kühlung
-Aktuell wird der Stick nach einiger Zeit sehr warm und bricht ab. Ich schaue gerade, dass ich eine Kühlung entwerfe und hier eine Info dazu poste.
+Aktuell wird der Stick nach einiger Zeit sehr warm und bricht ab. Ich habe einen Lüfter auf einer Raspberry Hülle geschraubt und kühle es aktuell mit 3,3V. Aktuell läuft es seit ein paar Tagen durch. Es funktioniert denke ich damit sehr gut.
 
 # Disclaimer
 
