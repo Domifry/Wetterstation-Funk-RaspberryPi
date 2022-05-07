@@ -31,9 +31,11 @@ pip install python3
 ```
 git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr
+sudo apt install git-all
 mkdir build
 cd build
 sudo apt install libusb-1.0-0-dev
+sudo apt-get install build-essential cmake
 sudo cmake -DDETACH_KERNEL_DRIVER=ON ../
 sudo make
 sudo make install
