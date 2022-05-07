@@ -33,8 +33,9 @@ git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr
 mkdir build
 cd build
-cmake -DDETACH_KERNEL_DRIVER=ON ../
-make
+sudo apt install libusb-1.0-0-dev
+sudo cmake -DDETACH_KERNEL_DRIVER=ON ../
+sudo make
 sudo make install
 sudo ldconfig
 ```
@@ -42,12 +43,7 @@ sudo ldconfig
 <b> Nun installieren wir eine Software zum Auslesen der Sensoren </b>
 ```
 git clone git://github.com/merbanan/rtl_433
-cd rtl_433
-mkdir build
-cd build
-cmake ../
-make
-sudo make install
+sudo apt-get install rtl-433
 ```
 
 <b> Kopieren wir die Files auf den Raspberry</b>
