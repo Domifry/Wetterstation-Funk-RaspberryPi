@@ -42,7 +42,6 @@ sudo ldconfig
 
 <b> Nun installieren wir eine Software zum Auslesen der Sensoren </b>
 ```
-git clone git://github.com/merbanan/rtl_433
 sudo apt-get install rtl-433
 ```
 
