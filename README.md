@@ -55,7 +55,7 @@ sudo mv SQL_RTL_433.service /etc/systemd/system
 ```
 
 # Sensoren bestimmen
-* gib zuerst ein sudo rtl_433 -R 73 -R 37
+* gib zuerst ein sudo rtl_433 -R 73 -R 37 -R 165
 * Schaue die die Eingaben an und ob du deine Sensoren findest! Siehe Bild unten.
 * Falls einige nicht kommen probiere andere Frequenzen: sudo rtl_433 -f 433.9M und rtl_433 -f 433.8M oder 433.95M oder nutze sudo rtl_433 -M level (du siehst die Frequenzen)
 * Für das Setup ist die beste Frequenz: 433.95M
